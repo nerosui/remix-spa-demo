@@ -6,6 +6,7 @@ import { join } from "node:path";
 
 const baseName = process.env.NODE_ENV === "production" ? "/remix-spa-demo/" : "/"
 export default defineConfig({
+  base: baseName,
   plugins: [
     remix({
       future: {
