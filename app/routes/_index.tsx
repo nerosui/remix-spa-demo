@@ -1,5 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
+import { Link, useLoaderData } from "@remix-run/react";
 
 export const meta: MetaFunction = () => {
   return [
@@ -22,7 +22,7 @@ export default function Index() {
       <ul>
         {data.map((post: { id: number; title: string }) => (
           <li key={post.id}>
-            <a href={`/blog/${post.id}`}>{post.title}</a>
+            <Link to={`/blog/${post.id}`}>{post.title}</Link>
           </li>
         ))}
       </ul>
